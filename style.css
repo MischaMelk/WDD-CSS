@@ -1,0 +1,72 @@
+:root{
+    --draaiplaat-kleur: grey;
+    --lp-kleur: #000;
+    --body-speler-kleur: brown;
+}
+
+
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+
+body div{
+    background-color: var(--body-speler-kleur);
+    width: 60%;
+    height: 80vh;
+    border-radius: .2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+body div div{
+    background-color: var(--draaiplaat-kleur);
+    width: 25em;
+    height: 25em;
+    border-radius: 50%;
+}
+
+body div div div{
+    width: 97%;
+    height: 97%;
+    background-color: var(--lp-kleur);
+}
+
+body div div div div{
+    width: 30%;
+    height: 30%;
+    background-image: linear-gradient(red, yellow);
+    animation: turn 2s linear infinite;
+}
+
+@keyframes turn {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+body div div div div div{
+    width: 10%;
+    height: 10%;
+    background: #000;
+}
+
+
+
+
+
+
+
+
+
+/* inspo: https://dribbble.com/shots/3215253-Vinyl-Record-Player# */
