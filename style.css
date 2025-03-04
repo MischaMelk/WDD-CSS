@@ -190,19 +190,20 @@ body div div:nth-of-type(2) form div div {
     transform: translate(-50%, -50%);
     transition: transform 0.3s ease;
     box-shadow: 0 1px 5px black;
+    z-index: 5;
 
 }
 
 
-body:has(input[type="radio"]:nth-of-type(1):checked) div form div div {
+body:has(input[type="radio"]:nth-of-type(1):checked) div form div div:nth-of-type(1) {
     transform: translate(-50%, -50%) translateY(-3.5em);
   }
   
-  body:has(input[type="radio"]:nth-of-type(2):checked) div form div div {
+  body:has(input[type="radio"]:nth-of-type(2):checked) div form div div:nth-of-type(1) {
     transform: translate(-50%, -50%) translateY(0);
   }
   
-  body:has(input[type="radio"]:nth-of-type(3):checked) div form div div {
+  body:has(input[type="radio"]:nth-of-type(3):checked) div form div div:nth-of-type(1) {
     transform: translate(-50%, -50%) translateY(3.5em);
   }
 
@@ -221,4 +222,66 @@ body:has(input[type="radio"]:nth-of-type(1):checked) div form div div {
 
   body div div:nth-of-type(2) ul{
     text-align: left;
+  }
+
+
+  body div div form div div:nth-of-type(2){
+    color: darkgrey;
+    position: absolute;
+    top: 10%;
+    left: 83%;
+    font-size: xx-large;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    grid-column: 1 / span 2;
+    z-index: 3;
+  }
+
+  body div div form div div:nth-of-type(3){
+    color: darkgrey;
+    position: absolute;
+    top: 50%;
+    left: 83%;
+    font-size: xx-large;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    grid-column: 1 / span 2;
+    z-index: 3;
+  }
+
+  body div div form div div:nth-of-type(4){
+    color: darkgrey;
+    position: absolute;
+    top: 50%;
+    left: 83%;
+    font-size: larger;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    grid-column: 1 / span 2;
+    z-index: 3;
+  }
+
+
+  body div div form div div:nth-of-type(5){
+    color: darkgrey;
+    top: 90%;
+    left: 83%;
+    font-size: larger;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    grid-column: 1 / span 2;
+    z-index: 3;
+  }
+
+  body:has(input[type="radio"]:nth-of-type(1):checked) div form div div:nth-of-type(3){
+    opacity: 0;
+  }
+
+
+  body:has(input[type="radio"]:nth-of-type(3):checked) div form div div:nth-of-type(4){
+    opacity: 0;
   }
