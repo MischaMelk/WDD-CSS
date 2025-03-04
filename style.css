@@ -1,204 +1,224 @@
-:root{
-    --draaiplaat-kleur: grey;
-    --lp-kleur: #000;
-    --body-speler-kleur: brown;
+:root {
+  --draaiplaat-kleur: grey;
+  --lp-kleur: #000;
+  --body-speler-kleur: brown;
+  --snelheid-plaat: 1s;
 }
 
-
-
-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
-
 
 /* Base platenspeler */
-body div:nth-of-type(1){
-    background-color: var(--body-speler-kleur);
-    width: 60%;
-    height: 80vh;
-    border-radius: .2em;
-    display: grid;
-    grid-template-columns: 20% 1fr 20%;
-    grid-template-rows: 20% 60% 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    
+body div:nth-of-type(1) {
+  background-color: var(--body-speler-kleur);
+  width: 60%;
+  height: 80vh;
+  border-radius: 0.2em;
+  display: grid;
+  grid-template-columns: 20% 1fr 20%;
+  grid-template-rows: 20% 60% 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  box-shadow: 0 1px 5px black;
 }
 
-
 /* Onderplaat */
-body div div:nth-of-type(1){
-    background-color: var(--draaiplaat-kleur);
-    width: 25em;
-    height: 25em;
-    border-radius: 50%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    justify-self: center;
-    grid-column: 2;
-    grid-row: 1 / span 2;
+body div div:nth-of-type(1) {
+  background-color: var(--draaiplaat-kleur);
+  width: 25em;
+  height: 25em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  grid-column: 2;
+  grid-row: 1 / span 2;
 }
 
 /* LP plaat zelf */
-body div div:nth-of-type(1) div{
-    width: 97%;
-    height: 97%;
-    background-color: var(--lp-kleur);
-    animation: turn 1s linear infinite;
-    animation-play-state: paused;
+body  div  div:nth-of-type(1)  div {
+  width: 97%;
+  height: 97%;
+  background-color: var(--lp-kleur);
+
+
 }
 
 /* Sticker LP plaat */
-body div div:nth-of-type(1) div div{
-    width: 30%;
-    height: 30%;
-    background-image: linear-gradient(blue, red);
+body div div:nth-of-type(1) div div {
+  width: 30%;
+  height: 30%;
+  background-image: linear-gradient(blue, red);
+  animation: turn var(--snelheid-plaat) linear infinite;
+  animation-play-state: paused;
+  transition: all 0.5s ease;
 }
-
-
 
 /* LP hole */
-body div div:nth-of-type(1) div div div{
-    width: 10%;
-    height: 10%;
-    background: #000;
+body div div:nth-of-type(1) div div div {
+  width: 10%;
+  height: 10%;
+  background: #000;
 }
-
-
 
 /* Input type voor de on/off button */
-input[type="checkbox"]{
-    appearance: none;
-    align-self: center;
-    justify-self: center;
-    
+input[type="checkbox"] {
+  appearance: none;
+  align-self: center;
+  justify-self: center;
 }
 
-input[type="checkbox"]::before{
-    content:"⏻";
-    background-color:rgb(184, 184, 184);
-    width: 5em;
-    height: 5em;
-    border-radius: 50%;
-    border: 3px solid lightgrey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(255, 56, 56);
-    transition: box-shadow .2s cubic-bezier(.47,1.64,.41,.8);
+input[type="checkbox"]::before {
+  content: "⏻";
+  background-color: rgb(184, 184, 184);
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  border: 3px solid lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 56, 56);
+  transition: box-shadow 0.2s cubic-bezier(0.47, 1.64, 0.41, 0.8);
 }
 
 input[type="checkbox"]:checked::before {
-    color: rgb(0, 255, 0);
-    box-shadow: inset 0 1px 5px black;
-    background-color:rgb(184, 184, 184);
-    
+  color: rgb(0, 255, 0);
+  box-shadow: inset 0 1px 5px black;
+  background-color: rgb(184, 184, 184);
 }
 
-
-
-/* Sticker van lp plaat wordt gedraaid zodra knop aan gedrukt is, *haal een div weg om de plaat te draaien */
-body div:has(input[type="checkbox"]:checked)  div:nth-of-type(1) div div {
-    animation-play-state: running;
+/* Sticker van lp plaat wordt gedraaid zodra knop aan gedrukt is */
+body div:has(input[type="checkbox"]:checked) div:nth-of-type(1) div div {
+  animation-play-state: running;
+  transition: all 0.5s ease; /* Voeg de overgang toe */
 }
 
+/* Rotate animatie */
 @keyframes turn {
-    0%{
-        rotate: 0deg;
-    }
-    100%{
-        rotate: 360deg;
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-/* slider voor RPM */
-body div div:nth-of-type(2){
-    grid-column: 3;
-    grid-row: 1 / span 2;
-    display: flex;
-    background-color: black;
-    align-self: center;
-    width: 9em;
-    height: 11em;
-    border-radius: .2em;
+/* opties voor RPM */
+body div div:nth-of-type(2) {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  background-color: rgb(23, 23, 23);
+  width: 15em;
+  height: 30em;
+  display: grid;
+  align-self: center;
+  width: 9em;
+  height: 11em;
+  border-radius: 0.2em;
+  z-index: 10;
+  box-shadow: 0 1px 5px black;
+  color: white;
+}
+
+/* De snelheid van de plaat wordt aangepast door de radio buttons */
+body:has(input[type="radio"]:nth-of-type(1):checked)
+  div:nth-of-type(1)
+  div
+  div {
+  --snelheid-plaat: 3s;
+}
+
+body:has(input[type="radio"]:nth-of-type(2):checked)
+  div:nth-of-type(1)
+  div
+  div {
+  --snelheid-plaat: 1s;
+}
+
+body:has(input[type="radio"]:nth-of-type(3):checked)
+  div:nth-of-type(1)
+  div
+  div {
+  --snelheid-plaat: 0.1s;
+}
+
+body div div:nth-of-type(2) form {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+input[type="radio"] {
+    width: 1em;
+    height: 1em;
+    opacity: 0;
+    cursor: pointer;
     z-index: 10;
-    box-shadow: 0 1px 5px black;
 }
 
-body div div:nth-of-type(2) input[type="range"]{
-    -webkit-appearance: none;
-    writing-mode: vertical-lr;
+body div div:nth-of-type(2) form div {
+    max-height: 9em;
     width: 2em;
-    height: 10em;
-    margin: 1em;
-    background-color: rgb(41, 41, 41) ;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    justify-self: center;
+    background-color: lightgrey;
+    position: absolute;
+    height: 100%;
+    border-radius: .2em;
+    box-shadow: none;
+    box-shadow: inset 0 0 6px black;
 }
 
-
-body div div:nth-of-type(2) input[type="range"]::-webkit-slider-thumb{
-    -webkit-appearance: none;
-    width: 20px; 
-    height: 15px; 
-    background: black; 
-    cursor: pointer; 
-    margin: 3px;
-}
-
-body div div:nth-of-type(2) ul{
+body div div:nth-of-type(2) form div div {
+    width: 1.3em;
+    height: 1.3em;
     background-color: black;
-    color: white;
-    margin: 0;
-    height: 75%;
-    display:flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-self: center;
-    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
+    box-shadow: 0 1px 5px black;
 
 }
 
-body div div:nth-of-type(2) ul{
+
+body:has(input[type="radio"]:nth-of-type(1):checked) div form div div {
+    transform: translate(-50%, -50%) translateY(-3.5em);
+  }
+  
+  body:has(input[type="radio"]:nth-of-type(2):checked) div form div div {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  
+  body:has(input[type="radio"]:nth-of-type(3):checked) div form div div {
+    transform: translate(-50%, -50%) translateY(3.5em);
+  }
+
+
+  body div div:nth-of-type(2) ul {
     list-style: none;
-
-}
-
-
-body div:nth-of-type(3){
-    grid-row: 2 / span 2;
+    width: 80%;
+    height: 95%;
     display:flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-self: center;
     flex-direction: column;
-}
-
-
-body div:nth-of-type(3) div{
-    background-color: black;
-    width: 3em;
-    height: 10em;
-    border-radius: 0;
-}
-
-body div:nth-of-type(3) input{
-    -webkit-appearance: none;
-    background-color: blue;
+    margin-left: -2.5em;
 
 }
 
-
-
-
-
-/* inspo: https://dribbble.com/shots/3215253-Vinyl-Record-Player# */
+  body div div:nth-of-type(2) ul{
+    text-align: left;
+  }
