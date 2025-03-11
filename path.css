@@ -1,0 +1,29 @@
+:root{
+    --thingie12: polygon(
+		calc(50% + 50% * sin(0deg) ) calc(50% - 50% * cos(0deg) ),
+		calc(50% + 50% * sin(15deg) ) calc(50% - 50% * cos(15deg) ),
+			calc(50% + var(--innerR) * sin(30deg) ) calc(50% - var(--innerR) * cos(30deg) ),
+		calc(50% + 50% * sin(45deg) ) calc(50% - 50% * cos(45deg) ),
+		calc(50% + 50% * sin(60deg) ) calc(50% - 50% * cos(60deg) ),
+			calc(50% + var(--innerR) * sin(75deg) ) calc(50% - var(--innerR) * cos(75deg) ),
+		calc(50% + 50% * sin(90deg) ) calc(50% - 50% * cos(90deg) ),
+		calc(50% + 50% * sin(105deg) ) calc(50% - 50% * cos(105deg) ),
+			calc(50% + var(--innerR) * sin(120deg) ) calc(50% - var(--innerR) * cos(120deg) ),
+		calc(50% + 50% * sin(135deg) ) calc(50% - 50% * cos(135deg) ),
+		calc(50% + 50% * sin(150deg) ) calc(50% - 50% * cos(150deg) ),
+			calc(50% + var(--innerR) * sin(165deg) ) calc(50% - var(--innerR) * cos(165deg) ),
+		calc(50% + 50% * sin(180deg) ) calc(50% - 50% * cos(180deg) ),
+		calc(50% + 50% * sin(195deg) ) calc(50% - 50% * cos(195deg) ),
+			calc(50% + var(--innerR) * sin(210deg) ) calc(50% - var(--innerR) * cos(210deg) ),
+		calc(50% + 50% * sin(225deg) ) calc(50% - 50% * cos(225deg) ),
+		calc(50% + 50% * sin(240deg) ) calc(50% - 50% * cos(240deg) ),
+			calc(50% + var(--innerR) * sin(255deg) ) calc(50% - var(--innerR) * cos(255deg) ),
+		calc(50% + 50% * sin(270deg) ) calc(50% - 50% * cos(270deg) ),
+		calc(50% + 50% * sin(285deg) ) calc(50% - 50% * cos(285deg) ),
+			calc(50% + var(--innerR) * sin(300deg) ) calc(50% - var(--innerR) * cos(300deg) ),
+		calc(50% + 50% * sin(315deg) ) calc(50% - 50% * cos(315deg) ),
+		calc(50% + 50% * sin(330deg) ) calc(50% - 50% * cos(330deg) ),
+			calc(50% + var(--innerR) * sin(345deg) ) calc(50% - var(--innerR) * cos(345deg) ),
+		calc(50% + 50% * sin(360deg) ) calc(50% - 50% * cos(360deg) )
+	);
+}

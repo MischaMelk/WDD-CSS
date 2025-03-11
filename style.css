@@ -1,12 +1,47 @@
 :root {
   --draaiplaat-kleur: grey;
   --lp-kleur: #000;
-  --body-speler-kleur: hsl(35, 50%, 70%);
+  --body-speler-kleur: #c08552;
   --snelheid-plaat: 1s;
   /* --sound-height: 100%; */
   --sound-hoogte-2: 60%;
   --sound-speed1: 5s;
   --sound-speed2: 4.5s;
+
+  --kleur-opties: #443730;
+
+
+  --innerR:40%;
+
+  --thingie12: polygon(
+		calc(50% + 50% * sin(0deg) ) calc(50% - 50% * cos(0deg) ),
+		calc(50% + 50% * sin(15deg) ) calc(50% - 50% * cos(15deg) ),
+			calc(50% + var(--innerR) * sin(30deg) ) calc(50% - var(--innerR) * cos(30deg) ),
+		calc(50% + 50% * sin(45deg) ) calc(50% - 50% * cos(45deg) ),
+		calc(50% + 50% * sin(60deg) ) calc(50% - 50% * cos(60deg) ),
+			calc(50% + var(--innerR) * sin(75deg) ) calc(50% - var(--innerR) * cos(75deg) ),
+		calc(50% + 50% * sin(90deg) ) calc(50% - 50% * cos(90deg) ),
+		calc(50% + 50% * sin(105deg) ) calc(50% - 50% * cos(105deg) ),
+			calc(50% + var(--innerR) * sin(120deg) ) calc(50% - var(--innerR) * cos(120deg) ),
+		calc(50% + 50% * sin(135deg) ) calc(50% - 50% * cos(135deg) ),
+		calc(50% + 50% * sin(150deg) ) calc(50% - 50% * cos(150deg) ),
+			calc(50% + var(--innerR) * sin(165deg) ) calc(50% - var(--innerR) * cos(165deg) ),
+		calc(50% + 50% * sin(180deg) ) calc(50% - 50% * cos(180deg) ),
+		calc(50% + 50% * sin(195deg) ) calc(50% - 50% * cos(195deg) ),
+			calc(50% + var(--innerR) * sin(210deg) ) calc(50% - var(--innerR) * cos(210deg) ),
+		calc(50% + 50% * sin(225deg) ) calc(50% - 50% * cos(225deg) ),
+		calc(50% + 50% * sin(240deg) ) calc(50% - 50% * cos(240deg) ),
+			calc(50% + var(--innerR) * sin(255deg) ) calc(50% - var(--innerR) * cos(255deg) ),
+		calc(50% + 50% * sin(270deg) ) calc(50% - 50% * cos(270deg) ),
+		calc(50% + 50% * sin(285deg) ) calc(50% - 50% * cos(285deg) ),
+			calc(50% + var(--innerR) * sin(300deg) ) calc(50% - var(--innerR) * cos(300deg) ),
+		calc(50% + 50% * sin(315deg) ) calc(50% - 50% * cos(315deg) ),
+		calc(50% + 50% * sin(330deg) ) calc(50% - 50% * cos(330deg) ),
+			calc(50% + var(--innerR) * sin(345deg) ) calc(50% - var(--innerR) * cos(345deg) ),
+		calc(50% + 50% * sin(360deg) ) calc(50% - 50% * cos(360deg) )
+	);
+
+
 }
 
 body {
@@ -15,6 +50,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
+  background-color: #faf9e7;
 }
 
 /* Base platenspeler */
@@ -122,7 +158,7 @@ body div div:nth-of-type(2) {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  background-color: rgb(23, 23, 23);
+  background-color: var(--kleur-opties);
   width: 15em;
   height: 30em;
   display: grid;
@@ -316,7 +352,7 @@ body:has(input[type="radio"]:nth-of-type(1):checked) div form div div:nth-of-typ
   body div div:nth-of-type(3) div{
     width: 3em;
     height: 15em;
-    background-color: black;
+    background-color: var(--kleur-opties);
     border-radius: .3em;
 
   }
@@ -332,7 +368,7 @@ body:has(input[type="radio"]:nth-of-type(1):checked) div form div div:nth-of-typ
   }
 
   body div div:nth-of-type(3) div div:nth-of-type(1) div{
-    height: var(--sound);
+    height: var(--volume);
     margin: 0;
     background-image: linear-gradient(
     to bottom,
@@ -352,7 +388,7 @@ body:has(input[type="radio"]:nth-of-type(1):checked) div form div div:nth-of-typ
 
 
   body div div:nth-of-type(3) div div:nth-of-type(2) div{
-    height: var(--sound);
+    height: var(--volume);
     margin: 0;
     background-image: linear-gradient(
         to bottom,
@@ -370,53 +406,53 @@ body:has(input[type="radio"]:nth-of-type(1):checked) div form div div:nth-of-typ
   }
 
   @keyframes sound {
-    0% { height: calc(var(--sound) * 1); }
-    5% { height: calc(var(--sound) * 0.6); }
-    7% { height: calc(var(--sound) * 0.9); }
-    15% { height: calc(var(--sound) * 0.55); }
-    18% { height: calc(var(--sound) * 0.75); }
-    26% { height: calc(var(--sound) * 0.45); }
-    30% { height: calc(var(--sound) * 1); }
-    35% { height: calc(var(--sound) * 0.6); }
-    37% { height: calc(var(--sound) * 0.9); }
-    45% { height: calc(var(--sound) * 0.55); }
-    48% { height: calc(var(--sound) * 0.75); }
-    56% { height: calc(var(--sound) * 0.45); }
-    60% { height: calc(var(--sound) * 1); }
-    65% { height: calc(var(--sound) * 0.6); }
-    67% { height: calc(var(--sound) * 0.9); }
-    75% { height: calc(var(--sound) * 0.55); }
-    78% { height: calc(var(--sound) * 0.75); }
-    86% { height: calc(var(--sound) * 0.45); }
-    90% { height: calc(var(--sound) * 1); }
-    95% { height: calc(var(--sound) * 0.6); }
-    97% { height: calc(var(--sound) * 0.9); }
-    100% { height: calc(var(--sound) * 1); }
+    0% { height: calc(var(--volume) * 1 * 1%); }
+    5% { height: calc(var(--volume) * 0.6 * 1%); }
+    7% { height: calc(var(--volume) * 0.9 * 1%); }
+    15% { height: calc(var(--volume) * 0.55 * 1%); }
+    18% { height: calc(var(--volume) * 0.75 * 1%); }
+    26% { height: calc(var(--volume) * 0.45 * 1%); }
+    30% { height: calc(var(--volume) * 1 * 1%); }
+    35% { height: calc(var(--volume) * 0.6 * 1%); }
+    37% { height: calc(var(--volume) * 0.9 * 1%); }
+    45% { height: calc(var(--volume) * 0.55 * 1%); }
+    48% { height: calc(var(--volume) * 0.75 * 1%); }
+    56% { height: calc(var(--volume) * 0.45 * 1%); }
+    60% { height: calc(var(--volume) * 1 * 1%); }
+    65% { height: calc(var(--volume) * 0.6 * 1%); }
+    67% { height: calc(var(--volume) * 0.9 * 1%); }
+    75% { height: calc(var(--volume) * 0.55 * 1%); }
+    78% { height: calc(var(--volume) * 0.75 * 1%); }
+    86% { height: calc(var(--volume) * 0.45 * 1%); }
+    90% { height: calc(var(--volume) * 1 * 1%); }
+    95% { height: calc(var(--volume) * 0.6 * 1%); }
+    97% { height: calc(var(--volume) * 0.9 * 1%); }
+    100% { height: calc(var(--volume) * 1 * 1%); }
   }
 
   @keyframes sound2 {
-    0% { height: calc(var(--sound) * 0.9); }
-    5% { height: calc(var(--sound) * 0.5); }
-    7% { height: calc(var(--sound) * 0.8); }
-    15% { height: calc(var(--sound) * 0.45); }
-    18% { height: calc(var(--sound) * 0.65); }
-    26% { height: calc(var(--sound) * 0.35); }
-    30% { height: calc(var(--sound) * 0.9); }
-    35% { height: calc(var(--sound) * 0.5); }
-    37% { height: calc(var(--sound) * 0.8); }
-    45% { height: calc(var(--sound) * 0.45); }
-    48% { height: calc(var(--sound) * 0.65); }
-    56% { height: calc(var(--sound) * 0.35); }
-    60% { height: calc(var(--sound) * 0.9); }
-    65% { height: calc(var(--sound) * 0.5); }
-    67% { height: calc(var(--sound) * 0.8); }
-    75% { height: calc(var(--sound) * 0.45); }
-    78% { height: calc(var(--sound) * 0.65); }
-    86% { height: calc(var(--sound) * 0.35); }
-    90% { height: calc(var(--sound) * 0.9); }
-    95% { height: calc(var(--sound) * 0.5); }
-    97% { height: calc(var(--sound) * 0.8); }
-    100% { height: calc(var(--sound) * 0.9); }
+    0% { height: calc(var(--volume) * 0.9 * 1%); }
+    5% { height: calc(var(--volume) * 0.5 * 1%); }
+    7% { height: calc(var(--volume) * 0.8 * 1%); }
+    15% { height: calc(var(--volume) * 0.45 * 1%); }
+    18% { height: calc(var(--volume) * 0.65 * 1%); }
+    26% { height: calc(var(--volume) * 0.35 * 1%); }
+    30% { height: calc(var(--volume) * 0.9 * 1%); }
+    35% { height: calc(var(--volume) * 0.5 * 1%); }
+    37% { height: calc(var(--volume) * 0.8 * 1%); }
+    45% { height: calc(var(--volume) * 0.45 * 1%); }
+    48% { height: calc(var(--volume) * 0.65 * 1%); }
+    56% { height: calc(var(--volume) * 0.35 * 1%); }
+    60% { height: calc(var(--volume) * 0.9 * 1%); }
+    65% { height: calc(var(--volume) * 0.5 * 1%); }
+    67% { height: calc(var(--volume) * 0.8 * 1%); }
+    75% { height: calc(var(--volume) * 0.45 * 1%); }
+    78% { height: calc(var(--volume) * 0.65 * 1%); }
+    86% { height: calc(var(--volume) * 0.35 * 1%); }
+    90% { height: calc(var(--volume) * 0.9 * 1%); }
+    95% { height: calc(var(--volume) * 0.5 * 1%); }
+    97% { height: calc(var(--volume) * 0.8 * 1%); }
+    100% { height: calc(var(--volume) * 0.9 * 1%); }
   }
   
 
@@ -462,3 +498,105 @@ body:has(input[type="radio"]:nth-of-type(1):checked) div form div div:nth-of-typ
         grid-area: 3 / 1 / 4 / 2;
     }
   }
+
+
+
+  body div div:nth-of-type(3) label {
+	--size-label:4em;
+	--size-track:calc( var(--size-label) / 8 );
+	--size-thumb:calc( var(--size-label) / 8 );
+	
+	--angle:90deg;
+	--thumb-color:white;
+	
+    
+	width:var(--size-label);
+	height:var(--size-label);
+    margin-top: 1em;
+
+
+	
+	position:relative;
+	
+	/* TRACK */
+	border-radius:50%;
+	background-image:
+		conic-gradient(
+			from 360deg,
+			black,
+			black
+		);
+
+        z-index: 11;
+        
+	
+
+        --rotation: calc(var(--volume) * 1.9deg);
+}
+
+/* THUMB */
+body div div:nth-of-type(3) label::before {
+	content:"";
+	position:absolute;
+	inset:0;
+	margin: .5em;
+    z-index: 10;
+
+    --width-thumb:10deg;
+	
+	--angle-thumb:calc( var(--angle) * -1 + var(--angle) * 2 * var(--volume) / 100 -  var(--width-thumb) / 2  );
+	
+    background-image:
+        conic-gradient(
+            from var(--angle-thumb),
+            var(--thumb-color) var(--width-thumb),
+            transparent 0 360deg
+        );
+
+	mask:
+		radial-gradient(
+			closest-side,
+			#0000 calc(100% - var(--size-thumb) - (var(--size-track) - var(--size-thumb)) * .5 ),
+			red 0 calc(100% - (var(--size-track) - var(--size-thumb)) * .5 ),
+			#0000 0
+		);
+}
+
+/* De ribbels test */
+body div div:nth-of-type(3) label::after {
+    content: '';
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    background-color: grey;
+    clip-path: var(--thingie12);
+
+    top: -8px;
+    left: -8px;
+
+    transform: rotate(var(--rotation)); /* Werkt nu */
+    transform-origin: center;
+
+}
+
+/* THE RANGE */
+body div div:nth-of-type(3) label input {
+	appearance:none;
+	margin:0;
+	display:block;
+	position:absolute;
+	inset:0;
+	z-index:10;
+	background:transparent;
+}
+
+::-webkit-slider-runnable-track {	
+	height:100%;
+}
+
+::-webkit-slider-thumb {
+	appearance:none;
+	
+	width:var(--size-track);
+	height:100%;
+}

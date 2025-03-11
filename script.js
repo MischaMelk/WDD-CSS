@@ -8,7 +8,7 @@ const updateRange = range => {
 	// the value of the custom property is the value of the input
 	const rangeValue = range.value;
 	// a custom property is set on the HTML element
-	document.documentElement.style.setProperty("--"+rangeName, rangeValue + "%");
+	document.documentElement.style.setProperty("--"+rangeName, rangeValue);
 }
 
 ranges.forEach(range => {
