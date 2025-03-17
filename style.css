@@ -11,35 +11,191 @@
   --kleur-opties: #443730;
 
 
-  --innerR:40%;
+  --innerR:48%;
 
   --thingie12: polygon(
-		calc(50% + 50% * sin(0deg) ) calc(50% - 50% * cos(0deg) ),
-		calc(50% + 50% * sin(15deg) ) calc(50% - 50% * cos(15deg) ),
-			calc(50% + var(--innerR) * sin(30deg) ) calc(50% - var(--innerR) * cos(30deg) ),
-		calc(50% + 50% * sin(45deg) ) calc(50% - 50% * cos(45deg) ),
-		calc(50% + 50% * sin(60deg) ) calc(50% - 50% * cos(60deg) ),
-			calc(50% + var(--innerR) * sin(75deg) ) calc(50% - var(--innerR) * cos(75deg) ),
-		calc(50% + 50% * sin(90deg) ) calc(50% - 50% * cos(90deg) ),
-		calc(50% + 50% * sin(105deg) ) calc(50% - 50% * cos(105deg) ),
-			calc(50% + var(--innerR) * sin(120deg) ) calc(50% - var(--innerR) * cos(120deg) ),
-		calc(50% + 50% * sin(135deg) ) calc(50% - 50% * cos(135deg) ),
-		calc(50% + 50% * sin(150deg) ) calc(50% - 50% * cos(150deg) ),
-			calc(50% + var(--innerR) * sin(165deg) ) calc(50% - var(--innerR) * cos(165deg) ),
-		calc(50% + 50% * sin(180deg) ) calc(50% - 50% * cos(180deg) ),
-		calc(50% + 50% * sin(195deg) ) calc(50% - 50% * cos(195deg) ),
-			calc(50% + var(--innerR) * sin(210deg) ) calc(50% - var(--innerR) * cos(210deg) ),
-		calc(50% + 50% * sin(225deg) ) calc(50% - 50% * cos(225deg) ),
-		calc(50% + 50% * sin(240deg) ) calc(50% - 50% * cos(240deg) ),
-			calc(50% + var(--innerR) * sin(255deg) ) calc(50% - var(--innerR) * cos(255deg) ),
-		calc(50% + 50% * sin(270deg) ) calc(50% - 50% * cos(270deg) ),
-		calc(50% + 50% * sin(285deg) ) calc(50% - 50% * cos(285deg) ),
-			calc(50% + var(--innerR) * sin(300deg) ) calc(50% - var(--innerR) * cos(300deg) ),
-		calc(50% + 50% * sin(315deg) ) calc(50% - 50% * cos(315deg) ),
-		calc(50% + 50% * sin(330deg) ) calc(50% - 50% * cos(330deg) ),
-			calc(50% + var(--innerR) * sin(345deg) ) calc(50% - var(--innerR) * cos(345deg) ),
-		calc(50% + 50% * sin(360deg) ) calc(50% - 50% * cos(360deg) )
-	);
+        calc(50% + 50% * sin(0deg)) calc(50% - 50% * cos(0deg)),
+        calc(50% + 50% * sin(2deg)) calc(50% - 50% * cos(2deg)),
+        calc(50% + var(--innerR) * sin(4deg)) calc(50% - var(--innerR) * cos(4deg)),
+        calc(50% + 50% * sin(6deg)) calc(50% - 50% * cos(6deg)),
+        calc(50% + 50% * sin(8deg)) calc(50% - 50% * cos(8deg)),
+        calc(50% + var(--innerR) * sin(10deg)) calc(50% - var(--innerR) * cos(10deg)),
+        calc(50% + 50% * sin(12deg)) calc(50% - 50% * cos(12deg)),
+        calc(50% + 50% * sin(14deg)) calc(50% - 50% * cos(14deg)),
+        calc(50% + var(--innerR) * sin(16deg)) calc(50% - var(--innerR) * cos(16deg)),
+        calc(50% + 50% * sin(18deg)) calc(50% - 50% * cos(18deg)),
+        calc(50% + 50% * sin(20deg)) calc(50% - 50% * cos(20deg)),
+        calc(50% + var(--innerR) * sin(22deg)) calc(50% - var(--innerR) * cos(22deg)),
+        calc(50% + 50% * sin(24deg)) calc(50% - 50% * cos(24deg)),
+        calc(50% + 50% * sin(26deg)) calc(50% - 50% * cos(26deg)),
+        calc(50% + var(--innerR) * sin(28deg)) calc(50% - var(--innerR) * cos(28deg)),
+        calc(50% + 50% * sin(30deg)) calc(50% - 50% * cos(30deg)),
+        calc(50% + 50% * sin(32deg)) calc(50% - 50% * cos(32deg)),
+        calc(50% + var(--innerR) * sin(34deg)) calc(50% - var(--innerR) * cos(34deg)),
+        calc(50% + 50% * sin(36deg)) calc(50% - 50% * cos(36deg)),
+        calc(50% + 50% * sin(38deg)) calc(50% - 50% * cos(38deg)),
+        calc(50% + var(--innerR) * sin(40deg)) calc(50% - var(--innerR) * cos(40deg)),
+        calc(50% + 50% * sin(42deg)) calc(50% - 50% * cos(42deg)),
+        calc(50% + 50% * sin(44deg)) calc(50% - 50% * cos(44deg)),
+        calc(50% + var(--innerR) * sin(46deg)) calc(50% - var(--innerR) * cos(46deg)),
+        calc(50% + 50% * sin(48deg)) calc(50% - 50% * cos(48deg)),
+        calc(50% + 50% * sin(50deg)) calc(50% - 50% * cos(50deg)),
+        calc(50% + var(--innerR) * sin(52deg)) calc(50% - var(--innerR) * cos(52deg)),
+        calc(50% + 50% * sin(54deg)) calc(50% - 50% * cos(54deg)),
+        calc(50% + 50% * sin(56deg)) calc(50% - 50% * cos(56deg)),
+        calc(50% + var(--innerR) * sin(58deg)) calc(50% - var(--innerR) * cos(58deg)),
+        calc(50% + 50% * sin(60deg)) calc(50% - 50% * cos(60deg)),
+        calc(50% + 50% * sin(62deg)) calc(50% - 50% * cos(62deg)),
+        calc(50% + var(--innerR) * sin(64deg)) calc(50% - var(--innerR) * cos(64deg)),
+        calc(50% + 50% * sin(66deg)) calc(50% - 50% * cos(66deg)),
+        calc(50% + 50% * sin(68deg)) calc(50% - 50% * cos(68deg)),
+        calc(50% + var(--innerR) * sin(70deg)) calc(50% - var(--innerR) * cos(70deg)),
+        calc(50% + 50% * sin(72deg)) calc(50% - 50% * cos(72deg)),
+        calc(50% + 50% * sin(74deg)) calc(50% - 50% * cos(74deg)),
+        calc(50% + var(--innerR) * sin(76deg)) calc(50% - var(--innerR) * cos(76deg)),
+        calc(50% + 50% * sin(78deg)) calc(50% - 50% * cos(78deg)),
+        calc(50% + 50% * sin(80deg)) calc(50% - 50% * cos(80deg)),
+        calc(50% + var(--innerR) * sin(82deg)) calc(50% - var(--innerR) * cos(82deg)),
+        calc(50% + 50% * sin(84deg)) calc(50% - 50% * cos(84deg)),
+        calc(50% + 50% * sin(86deg)) calc(50% - 50% * cos(86deg)),
+        calc(50% + var(--innerR) * sin(88deg)) calc(50% - var(--innerR) * cos(88deg)),
+        calc(50% + 50% * sin(90deg)) calc(50% - 50% * cos(90deg)),
+        calc(50% + 50% * sin(92deg)) calc(50% - 50% * cos(92deg)),
+        calc(50% + var(--innerR) * sin(94deg)) calc(50% - var(--innerR) * cos(94deg)),
+        calc(50% + 50% * sin(96deg)) calc(50% - 50% * cos(96deg)),
+        calc(50% + 50% * sin(98deg)) calc(50% - 50% * cos(98deg)),
+        calc(50% + var(--innerR) * sin(100deg)) calc(50% - var(--innerR) * cos(100deg)),
+        calc(50% + 50% * sin(102deg)) calc(50% - 50% * cos(102deg)),
+        calc(50% + 50% * sin(104deg)) calc(50% - 50% * cos(104deg)),
+        calc(50% + var(--innerR) * sin(106deg)) calc(50% - var(--innerR) * cos(106deg)),
+        calc(50% + 50% * sin(108deg)) calc(50% - 50% * cos(108deg)),
+        calc(50% + 50% * sin(110deg)) calc(50% - 50% * cos(110deg)),
+        calc(50% + var(--innerR) * sin(112deg)) calc(50% - var(--innerR) * cos(112deg)),
+        calc(50% + 50% * sin(114deg)) calc(50% - 50% * cos(114deg)),
+        calc(50% + 50% * sin(116deg)) calc(50% - 50% * cos(116deg)),
+        calc(50% + var(--innerR) * sin(118deg)) calc(50% - var(--innerR) * cos(118deg)),
+        calc(50% + 50% * sin(120deg)) calc(50% - 50% * cos(120deg)),
+        calc(50% + 50% * sin(122deg)) calc(50% - 50% * cos(122deg)),
+        calc(50% + var(--innerR) * sin(124deg)) calc(50% - var(--innerR) * cos(124deg)),
+        calc(50% + 50% * sin(126deg)) calc(50% - 50% * cos(126deg)),
+        calc(50% + 50% * sin(128deg)) calc(50% - 50% * cos(128deg)),
+        calc(50% + var(--innerR) * sin(130deg)) calc(50% - var(--innerR) * cos(130deg)),
+        calc(50% + 50% * sin(132deg)) calc(50% - 50% * cos(132deg)),
+        calc(50% + 50% * sin(134deg)) calc(50% - 50% * cos(134deg)),
+        calc(50% + var(--innerR) * sin(136deg)) calc(50% - var(--innerR) * cos(136deg)),
+        calc(50% + 50% * sin(138deg)) calc(50% - 50% * cos(138deg)),
+        calc(50% + 50% * sin(140deg)) calc(50% - 50% * cos(140deg)),
+        calc(50% + var(--innerR) * sin(142deg)) calc(50% - var(--innerR) * cos(142deg)),
+        calc(50% + 50% * sin(144deg)) calc(50% - 50% * cos(144deg)),
+        calc(50% + 50% * sin(146deg)) calc(50% - 50% * cos(146deg)),
+        calc(50% + var(--innerR) * sin(148deg)) calc(50% - var(--innerR) * cos(148deg)),
+        calc(50% + 50% * sin(150deg)) calc(50% - 50% * cos(150deg)),
+        calc(50% + 50% * sin(152deg)) calc(50% - 50% * cos(152deg)),
+        calc(50% + var(--innerR) * sin(154deg)) calc(50% - var(--innerR) * cos(154deg)),
+        calc(50% + 50% * sin(156deg)) calc(50% - 50% * cos(156deg)),
+        calc(50% + 50% * sin(158deg)) calc(50% - 50% * cos(158deg)),
+        calc(50% + var(--innerR) * sin(160deg)) calc(50% - var(--innerR) * cos(160deg)),
+        calc(50% + 50% * sin(162deg)) calc(50% - 50% * cos(162deg)),
+        calc(50% + 50% * sin(164deg)) calc(50% - 50% * cos(164deg)),
+        calc(50% + var(--innerR) * sin(166deg)) calc(50% - var(--innerR) * cos(166deg)),
+        calc(50% + 50% * sin(168deg)) calc(50% - 50% * cos(168deg)),
+        calc(50% + 50% * sin(170deg)) calc(50% - 50% * cos(170deg)),
+        calc(50% + var(--innerR) * sin(172deg)) calc(50% - var(--innerR) * cos(172deg)),
+        calc(50% + 50% * sin(174deg)) calc(50% - 50% * cos(174deg)),
+        calc(50% + 50% * sin(176deg)) calc(50% - 50% * cos(176deg)),
+        calc(50% + var(--innerR) * sin(178deg)) calc(50% - var(--innerR) * cos(178deg)),
+        calc(50% + 50% * sin(180deg)) calc(50% - 50% * cos(180deg)),
+        calc(50% + 50% * sin(182deg)) calc(50% - 50% * cos(182deg)),
+        calc(50% + var(--innerR) * sin(184deg)) calc(50% - var(--innerR) * cos(184deg)),
+        calc(50% + 50% * sin(186deg)) calc(50% - 50% * cos(186deg)),
+        calc(50% + 50% * sin(188deg)) calc(50% - 50% * cos(188deg)),
+        calc(50% + var(--innerR) * sin(190deg)) calc(50% - var(--innerR) * cos(190deg)),
+        calc(50% + 50% * sin(192deg)) calc(50% - 50% * cos(192deg)),
+        calc(50% + 50% * sin(194deg)) calc(50% - 50% * cos(194deg)),
+        calc(50% + var(--innerR) * sin(196deg)) calc(50% - var(--innerR) * cos(196deg)),
+        calc(50% + 50% * sin(198deg)) calc(50% - 50% * cos(198deg)),
+        calc(50% + 50% * sin(200deg)) calc(50% - 50% * cos(200deg)),
+        calc(50% + var(--innerR) * sin(202deg)) calc(50% - var(--innerR) * cos(202deg)),
+        calc(50% + 50% * sin(204deg)) calc(50% - 50% * cos(204deg)),
+        calc(50% + 50% * sin(206deg)) calc(50% - 50% * cos(206deg)),
+        calc(50% + var(--innerR) * sin(208deg)) calc(50% - var(--innerR) * cos(208deg)),
+        calc(50% + 50% * sin(210deg)) calc(50% - 50% * cos(210deg)),
+        calc(50% + 50% * sin(212deg)) calc(50% - 50% * cos(212deg)),
+        calc(50% + var(--innerR) * sin(214deg)) calc(50% - var(--innerR) * cos(214deg)),
+        calc(50% + 50% * sin(216deg)) calc(50% - 50% * cos(216deg)),
+        calc(50% + 50% * sin(218deg)) calc(50% - 50% * cos(218deg)),
+        calc(50% + var(--innerR) * sin(220deg)) calc(50% - var(--innerR) * cos(220deg)),
+        calc(50% + 50% * sin(222deg)) calc(50% - 50% * cos(222deg)),
+        calc(50% + 50% * sin(224deg)) calc(50% - 50% * cos(224deg)),
+        calc(50% + var(--innerR) * sin(226deg)) calc(50% - var(--innerR) * cos(226deg)),
+        calc(50% + 50% * sin(228deg)) calc(50% - 50% * cos(228deg)),
+        calc(50% + 50% * sin(230deg)) calc(50% - 50% * cos(230deg)),
+        calc(50% + var(--innerR) * sin(232deg)) calc(50% - var(--innerR) * cos(232deg)),
+        calc(50% + 50% * sin(234deg)) calc(50% - 50% * cos(234deg)),
+        calc(50% + 50% * sin(236deg)) calc(50% - 50% * cos(236deg)),
+        calc(50% + var(--innerR) * sin(238deg)) calc(50% - var(--innerR) * cos(238deg)),
+        calc(50% + 50% * sin(240deg)) calc(50% - 50% * cos(240deg)),
+        calc(50% + 50% * sin(242deg)) calc(50% - 50% * cos(242deg)),
+        calc(50% + var(--innerR) * sin(244deg)) calc(50% - var(--innerR) * cos(244deg)),
+        calc(50% + 50% * sin(246deg)) calc(50% - 50% * cos(246deg)),
+        calc(50% + 50% * sin(248deg)) calc(50% - 50% * cos(248deg)),
+        calc(50% + var(--innerR) * sin(250deg)) calc(50% - var(--innerR) * cos(250deg)),
+        calc(50% + 50% * sin(252deg)) calc(50% - 50% * cos(252deg)),
+        calc(50% + 50% * sin(254deg)) calc(50% - 50% * cos(254deg)),
+        calc(50% + var(--innerR) * sin(256deg)) calc(50% - var(--innerR) * cos(256deg)),
+        calc(50% + 50% * sin(258deg)) calc(50% - 50% * cos(258deg)),
+        calc(50% + 50% * sin(260deg)) calc(50% - 50% * cos(260deg)),
+        calc(50% + var(--innerR) * sin(262deg)) calc(50% - var(--innerR) * cos(262deg)),
+        calc(50% + 50% * sin(264deg)) calc(50% - 50% * cos(264deg)),
+        calc(50% + 50% * sin(266deg)) calc(50% - 50% * cos(266deg)),
+        calc(50% + var(--innerR) * sin(268deg)) calc(50% - var(--innerR) * cos(268deg)),
+        calc(50% + 50% * sin(270deg)) calc(50% - 50% * cos(270deg)),
+        calc(50% + 50% * sin(272deg)) calc(50% - 50% * cos(272deg)),
+        calc(50% + var(--innerR) * sin(274deg)) calc(50% - var(--innerR) * cos(274deg)),
+        calc(50% + 50% * sin(276deg)) calc(50% - 50% * cos(276deg)),
+        calc(50% + 50% * sin(278deg)) calc(50% - 50% * cos(278deg)),
+        calc(50% + var(--innerR) * sin(280deg)) calc(50% - var(--innerR) * cos(280deg)),
+        calc(50% + 50% * sin(282deg)) calc(50% - 50% * cos(282deg)),
+        calc(50% + 50% * sin(284deg)) calc(50% - 50% * cos(284deg)),
+        calc(50% + var(--innerR) * sin(286deg)) calc(50% - var(--innerR) * cos(286deg)),
+        calc(50% + 50% * sin(288deg)) calc(50% - 50% * cos(288deg)),
+        calc(50% + 50% * sin(290deg)) calc(50% - 50% * cos(290deg)),
+        calc(50% + var(--innerR) * sin(292deg)) calc(50% - var(--innerR) * cos(292deg)),
+        calc(50% + 50% * sin(294deg)) calc(50% - 50% * cos(294deg)),
+        calc(50% + 50% * sin(296deg)) calc(50% - 50% * cos(296deg)),
+        calc(50% + var(--innerR) * sin(298deg)) calc(50% - var(--innerR) * cos(298deg)),
+        calc(50% + 50% * sin(300deg)) calc(50% - 50% * cos(300deg)),
+        calc(50% + 50% * sin(302deg)) calc(50% - 50% * cos(302deg)),
+        calc(50% + var(--innerR) * sin(304deg)) calc(50% - var(--innerR) * cos(304deg)),
+        calc(50% + 50% * sin(306deg)) calc(50% - 50% * cos(306deg)),
+        calc(50% + 50% * sin(308deg)) calc(50% - 50% * cos(308deg)),
+        calc(50% + var(--innerR) * sin(310deg)) calc(50% - var(--innerR) * cos(310deg)),
+        calc(50% + 50% * sin(312deg)) calc(50% - 50% * cos(312deg)),
+        calc(50% + 50% * sin(314deg)) calc(50% - 50% * cos(314deg)),
+        calc(50% + var(--innerR) * sin(316deg)) calc(50% - var(--innerR) * cos(316deg)),
+        calc(50% + 50% * sin(318deg)) calc(50% - 50% * cos(318deg)),
+        calc(50% + 50% * sin(320deg)) calc(50% - 50% * cos(320deg)),
+        calc(50% + var(--innerR) * sin(322deg)) calc(50% - var(--innerR) * cos(322deg)),
+        calc(50% + 50% * sin(324deg)) calc(50% - 50% * cos(324deg)),
+        calc(50% + 50% * sin(326deg)) calc(50% - 50% * cos(326deg)),
+        calc(50% + var(--innerR) * sin(328deg)) calc(50% - var(--innerR) * cos(328deg)),
+        calc(50% + 50% * sin(330deg)) calc(50% - 50% * cos(330deg)),
+        calc(50% + 50% * sin(332deg)) calc(50% - 50% * cos(332deg)),
+        calc(50% + var(--innerR) * sin(334deg)) calc(50% - var(--innerR) * cos(334deg)),
+        calc(50% + 50% * sin(336deg)) calc(50% - 50% * cos(336deg)),
+        calc(50% + 50% * sin(338deg)) calc(50% - 50% * cos(338deg)),
+        calc(50% + var(--innerR) * sin(340deg)) calc(50% - var(--innerR) * cos(340deg)),
+        calc(50% + 50% * sin(342deg)) calc(50% - 50% * cos(342deg)),
+        calc(50% + 50% * sin(344deg)) calc(50% - 50% * cos(344deg)),
+        calc(50% + var(--innerR) * sin(346deg)) calc(50% - var(--innerR) * cos(346deg)),
+        calc(50% + 50% * sin(348deg)) calc(50% - 50% * cos(348deg)),
+        calc(50% + 50% * sin(350deg)) calc(50% - 50% * cos(350deg)),
+        calc(50% + var(--innerR) * sin(352deg)) calc(50% - var(--innerR) * cos(352deg)),
+        calc(50% + 50% * sin(354deg)) calc(50% - 50% * cos(354deg)),
+        calc(50% + 50% * sin(356deg)) calc(50% - 50% * cos(356deg)),
+        calc(50% + var(--innerR) * sin(358deg)) calc(50% - var(--innerR) * cos(358deg)),
+        calc(50% + 50% * sin(360deg)) calc(50% - 50% * cos(360deg))
+          );
 
 
 }
@@ -49,14 +205,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin: 0;
   background-color: #faf9e7;
+}
+
+h1{
+    margin-top: 0;
 }
 
 /* Base platenspeler */
 body div:nth-of-type(1) {
   background-color: var(--body-speler-kleur);
-  width: 60%;
+  width: 53em;
   height: 80vh;
   border-radius: 0.2em;
   display: grid;
@@ -65,48 +226,47 @@ body div:nth-of-type(1) {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   box-shadow: 0 1px 5px black;
+
 }
 
-/* Onderplaat */
+/* LP plaat nesting*/
 body div div:nth-of-type(1) {
-  background-color: var(--draaiplaat-kleur);
-  width: 28em;
-  height: 28em;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  justify-self: center;
-  grid-column: 2;
-  grid-row: 1 / span 3;
-}
-
-/* LP plaat zelf */
-body  div  div:nth-of-type(1)  div {
-  width: 97%;
-  height: 97%;
-  background-color: var(--lp-kleur);
-
-
-}
-
-/* Sticker LP plaat */
-body > div > div:nth-of-type(1) div div {
-  width: 30%;
-  height: 30%;
-  background-image: linear-gradient(blue, red);
-  animation: turn var(--snelheid-plaat) linear infinite;
-  animation-play-state: paused;
-  transition: all 0.5s ease;
-}
-
-/* LP hole */
-body div div:nth-of-type(1) div div div {
-  width: 10%;
-  height: 10%;
-  background: #000;
-}
+    background-color: var(--draaiplaat-kleur);
+    width: 28em;
+    height: 28em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    grid-column: 2;
+    grid-row: 1 / span 3;
+  
+    /* LP plaat zelf */
+    div {
+      width: 97%;
+      height: 97%;
+      background-color: var(--lp-kleur);
+  
+      /* Sticker LP plaat */
+      div {
+        width: 30%;
+        height: 30%;
+        background-image: linear-gradient(blue, red);
+        animation: turn var(--snelheid-plaat) linear infinite;
+        animation-play-state: paused;
+        transition: all 0.5s ease;
+  
+        /* LP hole */
+        div {
+          width: 10%;
+          height: 10%;
+          background: #000;
+        }
+      }
+    }
+  }
 
 /* Input type voor de on/off button */
 input[type="checkbox"] {
@@ -159,11 +319,9 @@ body div div:nth-of-type(2) {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   background-color: var(--kleur-opties);
-  width: 15em;
-  height: 30em;
   display: grid;
   align-self: center;
-  width: 9em;
+  width: 80%;
   height: 11em;
   border-radius: 0.2em;
   z-index: 10;
@@ -339,67 +497,64 @@ body:has(input[type="radio"]:nth-of-type(1):checked) div form div div:nth-of-typ
     opacity: 0;
   }
 
-/* sound control */
-  body div div:nth-of-type(3){
-    grid-column: 1 ;
+/* sound control nesting */
+body div div:nth-of-type(3) {
+    grid-column: 1;
     grid-row: 2 / span 2;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  
+    div {
+      width: 3em;
+      height: 15em;
+      background-color: var(--kleur-opties);
+      border-radius: .3em;
+  
+      div {
+        height: 13em;
+        width: .8em;
+        background-color: white;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 1px;
+  
+        &:nth-of-type(1) div {
+          height: var(--volume);
+          margin: 0;
+          background-image: linear-gradient(
+            to bottom,
+            hsl(120, 100%, 50%),
+            hsl(60, 100%, 50%),
+            hsl(0, 100%, 50%)
+          );
+          align-self: flex-end;
+          animation: sound var(--sound-speed1) infinite;
+          animation-play-state: paused;
+        }
+  
+        &:nth-of-type(2) div {
+          height: var(--volume);
+          margin: 0;
+          background-image: linear-gradient(
+            to bottom,
+            hsl(120, 100%, 50%),
+            hsl(60, 100%, 50%),
+            hsl(0, 100%, 50%)
+          );
+          align-self: flex-end;
+          animation: sound2 var(--sound-speed2) infinite;
+          animation-play-state: paused;
+        }
+      }
+    }
   }
-
-  body div div:nth-of-type(3) div{
-    width: 3em;
-    height: 15em;
-    background-color: var(--kleur-opties);
-    border-radius: .3em;
-
-  }
-
-  body div div:nth-of-type(3) div div{
-    height: 13em;
-    width: .8em;
-    background-color: white;
-    border-radius: 0;
-    box-shadow: none;
-    margin: 1px;
-
-  }
-
-  body div div:nth-of-type(3) div div:nth-of-type(1) div{
-    height: var(--volume);
-    margin: 0;
-    background-image: linear-gradient(
-    to bottom,
-    hsl(120, 100%, 50%),
-    hsl(60, 100%, 50%),
-    hsl(0, 100%, 50%)
-);
-    align-self: flex-end;
-    animation: sound var(--sound-speed1) infinite;
-    animation-play-state: paused;
-  } 
 
 
   body:has(input[type="checkbox"]:checked) div div:nth-of-type(3) div div:nth-of-type(1) div{
     animation-play-state: running;
   }
-
-
-  body div div:nth-of-type(3) div div:nth-of-type(2) div{
-    height: var(--volume);
-    margin: 0;
-    background-image: linear-gradient(
-        to bottom,
-        hsl(120, 100%, 50%),
-        hsl(60, 100%, 50%),
-        hsl(0, 100%, 50%)
-    );
-    align-self: flex-end;
-    animation: sound2 var(--sound-speed2) infinite;
-    animation-play-state: paused;
-  } 
 
   body:has(input[type="checkbox"]:checked) div div:nth-of-type(3) div div:nth-of-type(2) div{
     animation-play-state: running;
@@ -457,52 +612,58 @@ body:has(input[type="radio"]:nth-of-type(1):checked) div form div div:nth-of-typ
   
 
 
-  @media (max-width: 1250px) {
+  @media (max-width: 880px) {
     body div:nth-of-type(1) {
-        width: 70%;
+        width: 96%;
+    }
+
+    body div div:nth-of-type(1) {
+        width: 88%;
+        aspect-ratio: 1;
+        height: auto;
     }
   }
 
-  @media (max-width: 1070px) {
-    body div:nth-of-type(1) {
-        width: 90%;
-    }
-  }
-
-
-  @media (max-width: 830px) {
-    body{
-        align-items: start;
-        margin: 1em;
-    }
-
+  @media (max-width: 660px){
     body div:nth-of-type(1) {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 20% repeat(2, 1fr);
-        height: 150%;
+        grid-template-columns: 20% 1fr;
+        grid-template-rows: 20% 1fr 40%;
     }
 
-    /* lp plaat */
     body div div:nth-of-type(1) {
-        grid-area: 2 / 1 / 3 / 3;
+        grid-row: 1 / span 2;
+        grid-column: 2;
+        width: 18em;
+        height: 18em;
     }
 
-    /* RPM opties */
-    body div div:nth-of-type(2){
-        grid-area: 3 / 2 / 4 / 3;
-    }
-
-    /* Sound opties */
-    body div div:nth-of-type(3){
-        grid-area: 3 / 1 / 4 / 2;
+    body div div:nth-of-type(2) {
+        grid-row: 3;
+        grid-column: 2;
+        width: 9em;
+        justify-self: center;
     }
   }
+
+  @media (max-width: 390px){
+    body div div:nth-of-type(1){
+        width: 90%;
+        aspect-ratio: 1;
+        height: auto;
+    }
+  }
+
+  
+
+  
+
+
 
 
 
   body div div:nth-of-type(3) label {
-	--size-label:4em;
+	--size-label:3em;
 	--size-track:calc( var(--size-label) / 8 );
 	--size-thumb:calc( var(--size-label) / 8 );
 	
@@ -539,10 +700,10 @@ body div div:nth-of-type(3) label::before {
 	content:"";
 	position:absolute;
 	inset:0;
-	margin: .5em;
+	margin: .1em;
     z-index: 10;
 
-    --width-thumb:10deg;
+    --width-thumb:8deg;
 	
 	--angle-thumb:calc( var(--angle) * -1 + var(--angle) * 2 * var(--volume) / 100 -  var(--width-thumb) / 2  );
 	
@@ -566,18 +727,28 @@ body div div:nth-of-type(3) label::before {
 body div div:nth-of-type(3) label::after {
     content: '';
     position: absolute;
-    width: 5em;
-    height: 5em;
-    background-color: grey;
+    width: 4em;
+    height: 4em;
+    background-color: rgb(29, 29, 29);
     clip-path: var(--thingie12);
+
+
+  background: radial-gradient(circle, #222 20%, #000 80%);
+  border-radius: 50%;
+
+  box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.2),
+              inset 4px 4px 6px rgba(0, 0, 0, 0.8),
+              2px 2px 6px rgba(0, 0, 0, 0.7);
+
 
     top: -8px;
     left: -8px;
 
     transform: rotate(var(--rotation)); /* Werkt nu */
     transform-origin: center;
-
 }
+
+
 
 /* THE RANGE */
 body div div:nth-of-type(3) label input {
@@ -596,7 +767,6 @@ body div div:nth-of-type(3) label input {
 
 ::-webkit-slider-thumb {
 	appearance:none;
-	
 	width:var(--size-track);
 	height:100%;
 }

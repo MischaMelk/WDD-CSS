@@ -1,4 +1,8 @@
-:root{
+body{
+
+    --innerR:40%;
+
+
     --thingie12: polygon(
 		calc(50% + 50% * sin(0deg) ) calc(50% - 50% * cos(0deg) ),
 		calc(50% + 50% * sin(15deg) ) calc(50% - 50% * cos(15deg) ),
