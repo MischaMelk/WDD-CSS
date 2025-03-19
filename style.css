@@ -1,7 +1,7 @@
 :root {
-  --draaiplaat-kleur: grey;
-  --lp-kleur: #000;
-  --body-speler-kleur: #c08552;
+  --draaiplaat-kleur: rgb(160, 160, 160);
+  --lp-kleur: #0d0d0d;
+  --body-speler-kleur: #99582a;
   --snelheid-plaat: 1s;
   /* --sound-height: 100%; */
   --sound-hoogte-2: 60%;
@@ -196,9 +196,14 @@
         calc(50% + var(--innerR) * sin(358deg)) calc(50% - var(--innerR) * cos(358deg)),
         calc(50% + 50% * sin(360deg)) calc(50% - 50% * cos(360deg))
           );
+}
 
+@font-face {
+    font-family: "customFont";
+    src: url(Nequila-7Bamw.ttf);
 
 }
+
 
 body {
   height: 100vh;
@@ -207,15 +212,100 @@ body {
   align-items: center;
   flex-direction: column;
   margin: 0;
-  background-color: #faf9e7;
+  background-color: #ffe6a7;
+}
+
+section{
+    container-type: inline-size;
+    width: 90%;
+    z-index: -1;
 }
 
 h1{
-    margin-top: 0;
+    margin: 0;
+    font-family: 'customFont', sans-serif;
+    font-weight: normal;
+    font-size: 4em;
+    transform: translateY(70px);
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
+h1 span{
+    display: inline-block;
+    padding: .1em;
+}
+
+body:has(input[type="checkbox"]:checked) h1 span{
+    animation: bouncy 1s ease-in-out infinite alternate;
+
+}
+
+body:has(input[type="checkbox"]:checked) h1 span:nth-child(2){
+    animation-delay: .6s;
+}
+
+body:has(input[type="checkbox"]:checked) h1 span:nth-child(3){
+    animation-delay: 1.2s;
+}
+
+
+@keyframes bouncy{
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-70px);
+}
+}
+
+@container (max-width: 594px) {
+    h1{
+        font-size: 3em;
+    }
+}
+
+@container (max-width: 500px){
+    h1{
+        display:flex;
+        flex-direction: column;
+        justify-self: flex-start;
+        transform: translateY(0px);
+        transform: translateX(-200px);
+    }
+
+    h1 span{
+        padding: 0;
+        margin: -.2em;
+    }
+
+    body:has(input[type="checkbox"]:checked) h1 span{
+        animation: bouncy2 1s ease-in-out infinite alternate;
+    }
+
+    body:has(input[type="checkbox"]:checked) h1 span:nth-child(2){
+        animation-delay: .6s;
+    }
+    
+    body:has(input[type="checkbox"]:checked) h1 span:nth-child(3){
+        animation-delay: 1.2s;
+    }
+
+    @keyframes bouncy2{
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(200px);
+    }
+    }
+
+}
+
+
 /* Base platenspeler */
-body div:nth-of-type(1) {
+body > div:nth-of-type(1) {
   background-color: var(--body-speler-kleur);
   width: 53em;
   height: 80vh;
@@ -226,7 +316,7 @@ body div:nth-of-type(1) {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   box-shadow: 0 1px 5px black;
-
+  container-type: inline-size;
 }
 
 /* LP plaat nesting*/
@@ -253,7 +343,8 @@ body div div:nth-of-type(1) {
       div {
         width: 30%;
         height: 30%;
-        background-image: linear-gradient(blue, red);
+        background-image: url('images/beatles.jpeg');
+        background-size: cover;
         animation: turn var(--snelheid-plaat) linear infinite;
         animation-play-state: paused;
         transition: all 0.5s ease;
@@ -345,7 +436,7 @@ body:has(input[type="radio"]:nth-of-type(2):checked)
   div:nth-of-type(1)
   div
   div {
-  --snelheid-plaat: 1s;
+  --snelheid-plaat: 2s;
 
   --sound-speed1: 5s;
   --sound-speed2: 4.5s;
@@ -355,7 +446,7 @@ body:has(input[type="radio"]:nth-of-type(3):checked)
   div:nth-of-type(1)
   div
   div {
-  --snelheid-plaat: 0.1s;
+  --snelheid-plaat: 1s;
 
   --sound-speed1: 3s;
   --sound-speed2: 2.7s;
@@ -646,21 +737,13 @@ body div div:nth-of-type(3) {
     }
   }
 
-  @media (max-width: 390px){
+  @container (max-width: 400px){
     body div div:nth-of-type(1){
         width: 90%;
         aspect-ratio: 1;
         height: auto;
     }
   }
-
-  
-
-  
-
-
-
-
 
   body div div:nth-of-type(3) label {
 	--size-label:3em;
@@ -747,8 +830,6 @@ body div div:nth-of-type(3) label::after {
     transform: rotate(var(--rotation)); /* Werkt nu */
     transform-origin: center;
 }
-
-
 
 /* THE RANGE */
 body div div:nth-of-type(3) label input {
