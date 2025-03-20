@@ -201,7 +201,6 @@
 @font-face {
     font-family: "customFont";
     src: url(Nequila-7Bamw.ttf);
-
 }
 
 
@@ -226,7 +225,7 @@ h1{
     font-family: 'customFont', sans-serif;
     font-weight: normal;
     font-size: 4em;
-    transform: translateY(70px);
+    transform: translateY(80px);
     display:flex;
     justify-content: center;
     align-items: center;
@@ -238,7 +237,7 @@ h1 span{
 }
 
 body:has(input[type="checkbox"]:checked) h1 span{
-    animation: bouncy 1s ease-in-out infinite alternate;
+    animation: bouncy 1s cubic-bezier(.96,.33,.24,1) infinite alternate;
 
 }
 
@@ -256,7 +255,7 @@ body:has(input[type="checkbox"]:checked) h1 span:nth-child(3){
         transform: translateY(0);
     }
     100% {
-        transform: translateY(-70px);
+        transform: translateY(-80px);
 }
 }
 
@@ -281,7 +280,7 @@ body:has(input[type="checkbox"]:checked) h1 span:nth-child(3){
     }
 
     body:has(input[type="checkbox"]:checked) h1 span{
-        animation: bouncy2 1s ease-in-out infinite alternate;
+        animation: bouncy2 1s cubic-bezier(.96,.33,.24,1) infinite alternate;
     }
 
     body:has(input[type="checkbox"]:checked) h1 span:nth-child(2){
@@ -426,10 +425,8 @@ body:has(input[type="radio"]:nth-of-type(1):checked)
   div
   div {
   --snelheid-plaat: 3s;
-
   --sound-speed1: 6.5s;
   --sound-speed2: 7s;
-
 }
 
 body:has(input[type="radio"]:nth-of-type(2):checked)
@@ -437,7 +434,6 @@ body:has(input[type="radio"]:nth-of-type(2):checked)
   div
   div {
   --snelheid-plaat: 2s;
-
   --sound-speed1: 5s;
   --sound-speed2: 4.5s;
 }
@@ -447,10 +443,8 @@ body:has(input[type="radio"]:nth-of-type(3):checked)
   div
   div {
   --snelheid-plaat: 1s;
-
   --sound-speed1: 3s;
   --sound-speed2: 2.7s;
-
 }
 
 /* De knoppen voor de verschillende snelheden */
@@ -520,7 +514,6 @@ body:has(input[type="radio"]:nth-of-type(1):checked) div form div div:nth-of-typ
     align-self: center;
     flex-direction: column;
     margin-left: -2.5em;
-
 }
 
   body div div:nth-of-type(2) ul{
@@ -642,7 +635,6 @@ body div div:nth-of-type(3) {
     }
   }
 
-
   body:has(input[type="checkbox"]:checked) div div:nth-of-type(3) div div:nth-of-type(1) div{
     animation-play-state: running;
   }
@@ -700,8 +692,6 @@ body div div:nth-of-type(3) {
     97% { height: calc(var(--volume) * 0.8 * 1%); }
     100% { height: calc(var(--volume) * 0.9 * 1%); }
   }
-  
-
 
   @media (max-width: 880px) {
     body div:nth-of-type(1) {
@@ -749,17 +739,12 @@ body div div:nth-of-type(3) {
 	--size-label:3em;
 	--size-track:calc( var(--size-label) / 8 );
 	--size-thumb:calc( var(--size-label) / 8 );
-	
 	--angle:90deg;
 	--thumb-color:white;
 	
-    
 	width:var(--size-label);
 	height:var(--size-label);
     margin-top: 1em;
-
-
-	
 	position:relative;
 	
 	/* TRACK */
@@ -771,9 +756,6 @@ body div div:nth-of-type(3) {
 			black
 		);
 
-        z-index: 11;
-        
-	
 
         --rotation: calc(var(--volume) * 1.9deg);
 }
@@ -814,11 +796,8 @@ body div div:nth-of-type(3) label::after {
     height: 4em;
     background-color: rgb(29, 29, 29);
     clip-path: var(--thingie12);
-
-
   background: radial-gradient(circle, #222 20%, #000 80%);
   border-radius: 50%;
-
   box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.2),
               inset 4px 4px 6px rgba(0, 0, 0, 0.8),
               2px 2px 6px rgba(0, 0, 0, 0.7);
@@ -826,7 +805,6 @@ body div div:nth-of-type(3) label::after {
 
     top: -8px;
     left: -8px;
-
     transform: rotate(var(--rotation)); /* Werkt nu */
     transform-origin: center;
 }
